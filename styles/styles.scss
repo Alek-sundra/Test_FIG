@@ -1,0 +1,14 @@
+@import 'font',
+        'normolize',
+        'mixins',
+        'variables',
+        'globals';
+
+@import 'blocks/header',
+        'blocks/colorblock',
+        'blocks/packages',
+        'blocks/lists',
+        'blocks/buttons',
+        'blocks/upgrade',
+        'blocks/choose',
+        'blocks/footer';

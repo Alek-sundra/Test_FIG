@@ -1,0 +1,38 @@
+.choose {
+  @include flex-display(15);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-inline: var(--main-padding-inline);
+  padding-block-end: 152px;
+  letter-spacing: -0.03em;
+  background-image: url(/images/main.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 left var(--main-padding-inline);
+
+  .package__list {
+    max-inline-size: 263px;
+
+    .package__list-item {
+      border-radius: 0;
+    }
+
+    .list__title {
+      border-radius: 8px 8px 0 0;
+      padding-block: 18px;
+      text-align: center;
+      @include flex-text(52, 40);
+    }
+
+    .list__cost-button {
+      @include flex-display;
+      justify-content: space-between;
+      border-radius: 0 0 8px 8px;
+      border-block-start: 2px solid var(--text-color);
+      padding: 18px 15px 18px 11px;
+    }
+
+    .list__cost {
+      @include flex-text(36, 22);
+    }
+  }
+}

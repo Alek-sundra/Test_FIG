@@ -1,0 +1,94 @@
+.page {
+  color: var(--text_background-color);
+  font-family: var(--main-font);
+  font-weight: normal;
+  text-transform: uppercase;
+  background-color: var(--text_background-color);
+  max-inline-size: 1728px;
+  @include flex-text;
+}
+
+.header,
+.footer {
+  padding-inline: var(--main-padding-inline);
+  background-color: var(--main-ultra-color);
+}
+
+.main {
+  position: relative;
+  border: 4px solid var(--text-color);
+  padding-block-start: 75px;
+  padding-block-end: 190px;
+  &::before{
+    content: '';
+    border: 4px solid var(--text-color);
+    border-block-end: none;
+    background-color: var(--text_background-color);
+    inset-inline-start: 50%;
+    inset-block-start: -100px;
+    @include decor-square(200px,100px, 50px);                          
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible,
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--main-ultra-color);
+}
+
+textarea {
+  font-family: var(--main-font);
+  font-size: 16px;
+  color: var(--main-ultra-color);
+}
+
+textarea::placeholder {
+  color: var(--main-ultra-color);
+}
+
+h1{
+  color: var(--text-color);
+  @include flex-text(64, 48);
+}
+
+h2{
+  color: var(--text-color);
+  @include flex-text(32, 24);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}

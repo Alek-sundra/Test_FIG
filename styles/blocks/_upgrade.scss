@@ -1,0 +1,63 @@
+.section__title {
+  margin-block-end: 16px;
+  padding-inline: var(--main-padding-inline);
+  padding-block-start: 91px;
+  @include flex-text(32, 28);
+}
+.section__paragraph {
+  margin-block-end: 37px;
+  padding-inline: var(--main-padding-inline);
+  color: var(--text-color);
+  font-weight: normal;
+  text-transform: none;
+  max-inline-size: calc(670px + 2 * var(--main-padding-inline));
+  @include flex-text(24, 18);
+}
+.upgrade {
+  display: grid;
+  grid-template-columns: repeat(12, 7.11vw);
+  align-items: stretch;
+  row-gap: 15px;
+  letter-spacing: -0.03em;
+  max-inline-size: 1476px;
+
+  &__block {
+    @include flex-display(0);
+    align-items: center;
+    padding-inline-start: var(--main-padding-inline);
+  }
+  &__arrow-img {
+    flex-grow: 1;
+    background-image: url(/images/arrow-back.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+    min-block-size: 110px;
+  }
+  &__from-name,
+  &__to-name {
+    @include flex-text(40, 32);
+  }
+
+  &__from-name {
+    flex-basis: 11.3vw;
+  }
+  &__to-name {
+    justify-self: end;
+    padding-inline: 60px;
+  }
+  &__cost {
+    padding-inline-start: 44px;
+    @include flex-text(64, 48);
+  }
+}
+
+@for $i from 1 through 4 {
+  .section > div:nth-of-type(#{$i}) .upgrade__block {
+    grid-column: 1 / calc(6 + #{$i});
+  }
+}
+
+.upgrade:not(:last-child) {
+  margin-block-end: 25px;
+}

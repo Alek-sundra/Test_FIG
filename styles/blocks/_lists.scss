@@ -1,0 +1,62 @@
+.list-add {
+  border: 2px solid var(--text-color);
+  padding: 21px 44px;
+  color: var(--text-color);
+  background-color: var(--text_background-color);
+}
+
+.list-add:not(:last-child) {
+  border-block-end: none;
+}
+
+.list-add::before {
+  border: 2px solid var(--text-color);
+  border-block-end: none;
+  background-color: var(--text_background-color);
+}
+
+.package__list-item {
+  position: relative;
+  border-radius: 8px;
+  padding: 23px 59px;
+  @include flex-text(26, 20);
+
+  .list__paragraph:not(:last-child) {
+    margin-block-end: 27px;
+  }
+}
+
+.package__list-item::before {
+  content: "";
+  z-index: 1;
+}
+
+//карточка списка из первой секции Package
+.package__card {
+  --card-size: 360px;
+  flex-grow: 1;
+  align-self: flex-end;
+  max-inline-size: var(--card-size);
+
+  .package__list-item::before {
+    inset-inline-end: 28px;
+    inset-block-start: -28px;
+    @include decor-square(86px, 28px, 14px);
+  }
+
+  .package__list-item:not(.list-add):nth-child(2n + 1)::before {
+    inset-inline-start: 28px;
+  }
+}
+//карточка списка из третьей секции Choose
+.choose {
+  .package__list-item::before {
+    inset-inline-end: 21px;
+    inset-block-start: -21px;
+    @include decor-square(68px, 21px, 8px);
+  }
+
+  .package__list-item:nth-of-type(2)::before {
+    inset-inline-start: 21px;
+  }
+}

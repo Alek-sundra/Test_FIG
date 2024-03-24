@@ -1,0 +1,81 @@
+.section {
+  font-weight: bold;
+
+  &__main-title {
+    margin-block-end: 67px;
+    padding-inline: var(--main-padding-inline);
+    line-height: 1.037;
+    letter-spacing: -0.03em;
+  }
+}
+
+.package:last-child {
+  margin-block-end: 100px;
+}
+
+.package {
+  position: relative;
+  padding-inline: var(--main-padding-inline);
+
+  &__title,
+  &__title.block-visible {
+    @include flex-display;
+    justify-content: space-between;
+    padding-block: 29px;
+    @include flex-text(64, 48);
+  }
+  &__name {
+    letter-spacing: 0.05em;
+  }
+
+  &__cost {
+    letter-spacing: -0.03em;
+  }
+
+  .block-hide + .package__button-more img {
+    transform: rotate(180deg);
+  }
+
+  .article,
+  .article.block-visible {
+    @include flex-display(86);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block-end: 90px;
+    letter-spacing: -0.03em;
+  }
+
+  .block-hide {
+    display: none;
+  }
+
+  &__full-scale {
+    padding-block-start: 100px;
+    max-inline-size: 453px;
+  }
+
+  &__title-big {
+    @include flex-text(128, 64);
+  }
+
+  &__paragraph {
+    margin-block-end: 103px;
+    font-weight: normal;
+    text-transform: none;
+    @include flex-text(24, 18);
+  }
+
+  &__button {
+    margin-block-end: 109px;
+    @include flex-display(4);
+
+    &-cost {
+      flex-grow: 1;
+      border-radius: 12px 0 0 12px;
+      padding-inline: 41px;
+      color: var(--text-color);
+      background-color: var(--text_background-color);
+      @include flex-text(64, 48);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@mixin flex-text($max: 24, $min: 18) {
+  font-size: clamp(#{$min}px, #{$max / 1728 * 100}vw, #{$max}px);
+}
+
+@mixin flex-display($gap: 30) {
+  display: flex;
+  gap: #{$gap}px;
+}
+
+@mixin decor-square($width, $height, $radius) {
+  position: absolute;
+  display: block;
+  border-radius: $radius $radius 0 0;
+  inline-size: $width;
+  block-size: $height;
+}
+
+@mixin svg-size($size) {
+  align-self: center;
+  inline-size: $size;
+  block-size: $size;
+}

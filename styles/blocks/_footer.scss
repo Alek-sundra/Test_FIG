@@ -1,0 +1,104 @@
+.footer {
+  padding-block: 162px 60px;
+  @include flex-display;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: none;
+  background-image: url(/images/footer_abstract.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right var(--main-padding-inline);
+
+  &__link {
+    text-decoration: underline;
+  }
+}
+
+.contacts {
+  &__title {
+    @include flex-text(56, 48);
+    letter-spacing: 0.05em;
+    margin-block-end: 101px;
+    text-transform: uppercase;
+    color: var(--text_background-color);
+  }
+
+  .address {
+    @include flex-display(25);
+    flex-direction: column;
+    margin-block-end: 220px;
+  }
+
+  .adress__link {
+    @include flex-display(15);
+    span {
+      align-self: center;
+      font-style: normal;
+    }
+  }
+
+  .agreement {
+    margin-block-end: 8px;
+    line-height: 30px;
+  }
+  .pay-system {
+    @include flex-display(11);
+    flex-wrap: wrap;
+    background-color: var(--text_background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    padding: 8px 16px;
+    border-radius: 16px;
+    align-items: center;
+    &__image {
+      object-fit: contain;
+    }
+  }
+}
+
+.ask {
+  position: relative;
+  flex-grow: 1;
+  max-inline-size: 568px;
+
+  &__title {
+    @include flex-text(32, 24);
+    letter-spacing: 0.05em;
+    margin-block-end: 44px;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    position: absolute;
+    inset-inline-end: -13px;
+    inset-block-start: -97px;
+  }
+
+  &__form {
+    margin-block-end: 17px;
+  }
+
+  &__form-input {
+    display: block;
+    inline-size: 100%;
+    block-size: 64px;
+    background-color: var(--text_background-color);
+    border-radius: 20px;
+    border: none;
+    padding-inline-start: 26px;    
+    margin-block-end: 24px;
+    font-size: 16px;
+    color: var(--main-ultra-color);
+  }
+
+  &__form textarea {
+    margin-block-end: 17px;
+    padding-block-start: 22px;
+  }
+
+  &__form-agreement {
+    padding-inline-start: 37px;
+    margin-block-end: 38px;
+  }
+}

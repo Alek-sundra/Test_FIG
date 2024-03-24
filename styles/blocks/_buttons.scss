@@ -1,0 +1,68 @@
+.package {
+  &__button-more {
+    z-index: 1;
+    inset-inline-start: 50%;
+    inset-block-end: -100px;
+    @include decor-square(200px, 100px, 50px);
+    border-radius: 0 0 50px 50px;
+  }
+  &__button-add {
+    @include flex-display(16);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 36px 14px 36px;
+    background-color: var(--text_background-color);
+
+    .package__pic {
+      @include svg-size(36px);
+    }
+  }
+}
+
+@for $i from 1 through 5 {
+  .section > div:nth-of-type(#{$i}) .package__button-more {
+    inset-inline-start: calc(50% - (#{$i} - 1) * 133px);
+  }
+}
+
+.upgrade {
+  &__button-add {
+    @include flex-display(16);
+    border: 2px solid currentColor;
+    border-radius: 0 12px 12px 0;
+    padding: 36px 18px 36px 24px;
+
+    .package__pic {
+      @include svg-size(34px);
+    }
+    .package__pic-plus {
+      @include svg-size(27px);
+    }
+  }
+}
+
+.choose {
+  &__button-add {
+    @include flex-display(10);
+    border-radius: 8px;
+    padding: 6px 8px;
+  }
+
+  .package__pic-cart {
+    @include svg-size(21px);
+  }
+
+  .package__pic-plus {
+    @include svg-size(17px);
+  }
+}
+
+.footer {
+  .ask__form-button {
+    color: var(--text-color);
+    padding: 20px 80px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid var(--text-color);
+  }
+}
