@@ -63,18 +63,19 @@
 
   &__title {
     position: relative;
-    @include flex-text(32, 24);
-    letter-spacing: 0.05em;
     margin-block-end: 44px;
-    text-transform: uppercase;
-  }
-
-  &__image {
-    position: absolute;
-    inset-inline-end: -13px;
-    inset-block-end: -74px;
-    inline-size: 15vw;
-  }
+    span {
+      @include flex-text(32, 24);
+      letter-spacing: 0.05em;      
+      text-transform: uppercase;
+    }
+    .ask-image {
+      position: absolute;
+      inset-inline-end: -13px;
+      inset-block-end: -74px;
+      inline-size: 15vw;
+    }
+  } 
 
   &__form {
     margin-block-end: 17px;
@@ -87,7 +88,7 @@
     background-color: var(--text_background-color);
     border-radius: 20px;
     border: none;
-    padding-inline-start: 26px;    
+    padding-inline-start: 26px;
     margin-block-end: 24px;
     font-size: 16px;
     color: var(--main-ultra-color);
