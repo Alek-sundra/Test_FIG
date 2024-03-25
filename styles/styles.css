@@ -536,7 +536,7 @@ h3 {
 }
 .upgrade__arrow-img {
   flex-grow: 1;
-  background-image: url(/images/arrow-back.svg);
+  background-image: url(../images/arrow-back.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right;
@@ -585,7 +585,7 @@ h3 {
   padding-inline: var(--main-padding-inline);
   padding-block-end: 152px;
   letter-spacing: -0.03em;
-  background-image: url(/images/main.png);
+  background-image: url(../images/main.png);
   background-repeat: no-repeat;
   background-position: bottom 0 left var(--main-padding-inline);
 }
@@ -622,7 +622,7 @@ h3 {
   font-size: 16px;
   font-weight: normal;
   text-transform: none;
-  background-image: url(/images/footer_abstract.png);
+  background-image: url(../images/footer_abstract.png);
   background-repeat: no-repeat;
   background-position: bottom 0 right var(--main-padding-inline);
 }
@@ -671,11 +671,11 @@ h3 {
 }
 
 .ask {
-  position: relative;
   flex-grow: 1;
   max-inline-size: 568px;
 }
 .ask__title {
+  position: relative;
   font-size: clamp(24px, 1.8518518519vw, 32px);
   letter-spacing: 0.05em;
   margin-block-end: 44px;
@@ -684,7 +684,8 @@ h3 {
 .ask__image {
   position: absolute;
   inset-inline-end: -13px;
-  inset-block-start: -97px;
+  inset-block-end: -74px;
+  inline-size: 15vw;
 }
 .ask__form {
   margin-block-end: 17px;

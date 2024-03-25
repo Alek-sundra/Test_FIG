@@ -6,7 +6,7 @@
   font-size: 16px;
   font-weight: normal;
   text-transform: none;
-  background-image: url(/images/footer_abstract.png);
+  background-image: url(../images/footer_abstract.png);
   background-repeat: no-repeat;
   background-position: bottom 0 right var(--main-padding-inline);
 
@@ -58,11 +58,11 @@
 }
 
 .ask {
-  position: relative;
   flex-grow: 1;
   max-inline-size: 568px;
 
   &__title {
+    position: relative;
     @include flex-text(32, 24);
     letter-spacing: 0.05em;
     margin-block-end: 44px;
@@ -72,7 +72,8 @@
   &__image {
     position: absolute;
     inset-inline-end: -13px;
-    inset-block-start: -97px;
+    inset-block-end: -74px;
+    inline-size: 15vw;
   }
 
   &__form {
