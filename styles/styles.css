@@ -676,12 +676,14 @@ h3 {
 }
 .ask__title {
   position: relative;
+  margin-block-end: 44px;
+}
+.ask__title span {
   font-size: clamp(24px, 1.8518518519vw, 32px);
   letter-spacing: 0.05em;
-  margin-block-end: 44px;
   text-transform: uppercase;
 }
-.ask__image {
+.ask__title .ask-image {
   position: absolute;
   inset-inline-end: -13px;
   inset-block-end: -74px;
